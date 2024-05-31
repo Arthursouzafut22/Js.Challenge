@@ -997,7 +997,65 @@ let promis = new Promise((resolve) => {
 
 })
 
-console.log(promis)
+console.log(promis);
+
+
+
+function somaResistencia(array) {
+
+  return array.reduce((ac,it) => ac + it);
+
+}
+
+console.log(somaResistencia([16, 3.5, 6]));
+
+
+
+
+function maiorTroca(numero) {
+
+  const strin = numero.toString();
+  const primReplace = strin.slice(0,1).replace(strin[1],strin[0]).replace('',strin[1]);
+
+  let numberFormat = Number(primReplace);
+
+  if(numberFormat < numero || numberFormat === numero) return true;
+  else if(numberFormat > numero) return false;
+
+}
+
+console.log(maiorTroca(18));
+
+
+
+
+function perdidaoMultidao(string) {
+
+  const regx = /(?<=[A-Z])[a-z](?=[A-Z])/g;
+  const methString = string.match(regx);
+
+  return  methString.toString().split(',').join('');
+
+}
+
+console.log(perdidaoMultidao('bEEFGBuFBRrHgUHlNFYaYr'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
