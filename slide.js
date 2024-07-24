@@ -91,11 +91,6 @@ function converteSegundos(horas, minutos) {
 }
 console.log(converteSegundos(2, 0));
 
-// 1 hora tem 60 minutos
-// 60 minutos tem
-// 1 minuto tem 60 segundos
-// 60s x 60 = 120
-
 function isSeven(x) {
   return x == "7" ? true : false;
 }
@@ -491,170 +486,139 @@ function numeroArgumentos() {
 console.log(numeroArgumentos("e"));
 
 function operadorNum(num1, num2, operador) {
-
-  if(operador === '+') return num1 + num2;
-  else if(operador === '-') return num1 - num2;
-  else if(operador === '*') return num1 * num2;
-  else if(operador === '/') return num1 / num2;
-  
+  if (operador === "+") return num1 + num2;
+  else if (operador === "-") return num1 - num2;
+  else if (operador === "*") return num1 * num2;
+  else if (operador === "/") return num1 / num2;
 }
 
 console.log(operadorNum(1, 2, "-"));
 
+function saoDevdd(array1, array2) {
+  let arr1 = array1.includes("pal de sal");
+  let arr2 = array2.includes("pal de sal");
 
-function saoDevdd(array1,array2) {
-  let arr1 = array1.includes('pal de sal');
-  let arr2 = array2.includes('pal de sal');
-
-  return arr1 === arr2
+  return arr1 === arr2;
 }
 
-console.log(saoDevdd(['','carne','hhhh'],['pal de sal','carne', 'pao doce']))
-
-
+console.log(
+  saoDevdd(["", "carne", "hhhh"], ["pal de sal", "carne", "pao doce"])
+);
 
 function lengthParans() {
-  return arguments.length
+  return arguments.length;
 }
-console.log(lengthParans('v','s','s',2))
+console.log(lengthParans("v", "s", "s", 2));
 
 function saoMigos(nome) {
-
-  if(nome === 'Gilvan') return 'Arthur eu so seu pai';
-  else if(nome === 'irma') return 'Arthur eu so sua irma';
-  else if(nome === 'cunhado') return 'Arthur eu so seu cunhadinho';
-  else if(nome === 'primo') return 'Arthur eu so seu primo';
-
+  if (nome === "Gilvan") return "Arthur eu so seu pai";
+  else if (nome === "irma") return "Arthur eu so sua irma";
+  else if (nome === "cunhado") return "Arthur eu so seu cunhadinho";
+  else if (nome === "primo") return "Arthur eu so seu primo";
 }
 
-console.log(saoMigos('Gilvan'));
+console.log(saoMigos("Gilvan"));
 
 function arrayStrinng(array) {
-
-  let conversao = array.toString().split(',')
+  let conversao = array.toString().split(",");
   return conversao.length === 0 ? [] : conversao;
 }
 
-console.log(arrayStrinng(["abc", 123, "def", 456]))
-
+console.log(arrayStrinng(["abc", 123, "def", 456]));
 
 function receberNome(string) {
-  const frente = 'fut'
-   return string.length < frente.length ? frente.repeat(3) : false
+  const frente = "fut";
+  return string.length < frente.length ? frente.repeat(3) : false;
 }
 
-console.log(receberNome('fu'));
+console.log(receberNome("fu"));
 
 function tiposDeDados(array) {
   return array.map((element) => typeof element);
 }
 
-console.log(tiposDeDados([1,2, 'bola', true]));
-
+console.log(tiposDeDados([1, 2, "bola", true]));
 
 function ePlural(string) {
-  return string.endsWith('s')
+  return string.endsWith("s");
 }
 
-console.log(ePlural('magic'));
-
+console.log(ePlural("magic"));
 
 function concatenandoString(string) {
   return string[0] + string[string.length - 1];
-
 }
 
-console.log(concatenandoString('durga'));
-
-
+console.log(concatenandoString("durga"));
 
 function fatiasPizzas(total, pessoas, cada) {
-  let divisao = Math.floor(( total /= pessoas ));
+  let divisao = Math.floor((total /= pessoas));
 
   return divisao % 5 === cada;
 }
 
-console.log(fatiasPizzas(24,12,2));
-
-
+console.log(fatiasPizzas(24, 12, 2));
 
 function repetString(string) {
-  let init = string.substring(0,2) + '...';
+  let init = string.substring(0, 2) + "...";
 
-  return init.repeat(2) + string + '?';
+  return init.repeat(2) + string + "?";
 }
 
-console.log(repetString('incredible'));
-
-
+console.log(repetString("incredible"));
 
 function recebiArray(array) {
-  return array.map(Number)
+  return array.map(Number);
 }
 
-console.log(recebiArray(['12','13','14','15']))
+console.log(recebiArray(["12", "13", "14", "15"]));
 
-
-const cabeca = [1,2]
-const cuada = [3,4]
+const cabeca = [1, 2];
+const cuada = [3, 4];
 
 const str = [...cabeca, ...cuada];
 
-
-const umTrue  = (a,b) => {
-  if( a || b) return true
-  else if(a) return true
-  else if(b) return true
+const umTrue = (a, b) => {
+  if (a || b) return true;
+  else if (a) return true;
+  else if (b) return true;
   else {
-    return "not found"
+    return "not found";
   }
-}
-
-console.log(umTrue(5,0));
-
-const climaAtual = (clima) => {
-
-  if(clima) return `Today, I am feeling ${clima}`;
-  else if(!clima) return "Today, I am feeling neutral";
-
-}
-
-console.log(climaAtual(''));
-
-
-const destructArray = (array) => {
-
-  let tho = [um,dois,tres,quatro] = array;
-  return tho[0];
-}
-
-console.log(destructArray(['bola','amor','dinheiro','love']));
-
-
-
-const contarSilabas = (silaba) => {
-
-  var regexVocales = /[aeiouáéíóú]/ig;
-  var vocales = silaba.match(regexVocales)
-  return vocales ? vocales.length : 0;
-
 };
 
-console.log(contarSilabas('nanana'));
+console.log(umTrue(5, 0));
 
+const climaAtual = (clima) => {
+  if (clima) return `Today, I am feeling ${clima}`;
+  else if (!clima) return "Today, I am feeling neutral";
+};
 
+console.log(climaAtual(""));
 
-function temString(string) { 
+const destructArray = (array) => {
+  let tho = ([um, dois, tres, quatro] = array);
+  return tho[0];
+};
 
-  if(string) return " Do not " + string;
-  else return string
+console.log(destructArray(["bola", "amor", "dinheiro", "love"]));
+
+const contarSilabas = (silaba) => {
+  var regexVocales = /[aeiouáéíóú]/gi;
+  var vocales = silaba.match(regexVocales);
+  return vocales ? vocales.length : 0;
+};
+
+console.log(contarSilabas("nanana"));
+
+function temString(string) {
+  if (string) return " Do not " + string;
+  else return string;
 }
 
-console.log(temString(''));
-
+console.log(temString(""));
 
 function regexCaps(string1, string2) {
-
   let regexCaps = new RegExp("^" + string1 + "$");
 
   return regexCaps.test(string2);
@@ -662,483 +626,351 @@ function regexCaps(string1, string2) {
 
 console.log(regexCaps("hello", "hello"));
 
-const user = { name: "John", 
-email: "john@example.com",
-city: "Phoenix", 
-state: "AZ",
-country: "USA"}
+const user = {
+  name: "John",
+  email: "john@example.com",
+  city: "Phoenix",
+  state: "AZ",
+  country: "USA",
+};
 
-const  { name, email, rest } = user ;
+const { name, email, rest } = user;
 
-
-
-function strinVezes(string,numero) {
-
-  if(typeof arguments[0] !== 'string') return 'Not A String !!';
+function strinVezes(string, numero) {
+  if (typeof arguments[0] !== "string") return "Not A String !!";
   else return string.repeat(numero);
 }
 
-console.log(strinVezes('java ', 3));
-
-
+console.log(strinVezes("java ", 3));
 
 function tamanhoString(string) {
-
   let cont;
-  for(let i = 0; i < string.length; i++) {
-    cont = i
+  for (let i = 0; i < string.length; i++) {
+    cont = i;
   }
 
   return cont + 1;
 }
 
-console.log(tamanhoString('Amor'));
-
+console.log(tamanhoString("Amor"));
 
 function metadeNumber(numero) {
-
-  let div = (numero / 2);
-  let umQuarto = (numero / 4);
-  let umOitavo = (numero / 8);
+  let div = numero / 2;
+  let umQuarto = numero / 4;
+  let umOitavo = numero / 8;
 
   return [div, umQuarto, umOitavo];
-
-
 }
 
 console.log(metadeNumber(22));
 
-
-
 function quantosLados(numero) {
-
-  let matrix = ["círculo","semicírculo","triângulo","quadrado","Pentágono","hexágono","heptágono","octógono","nonágono","decágono"];
+  let matrix = [
+    "círculo",
+    "semicírculo",
+    "triângulo",
+    "quadrado",
+    "Pentágono",
+    "hexágono",
+    "heptágono",
+    "octógono",
+    "nonágono",
+    "decágono",
+  ];
 
   return matrix[numero - 1];
-
 }
 
 console.log(quantosLados(3));
 
-
 function multiplicadoPorDois(matrix) {
-  return matrix.map((element) => element * 2)
+  return matrix.map((element) => element * 2);
 }
 
-console.log(multiplicadoPorDois([2,5,3]));
-
-
-
+console.log(multiplicadoPorDois([2, 5, 3]));
 
 function alavancaClass(matrix) {
-
-  
-  for(let i = 0; i < matrix.length; i++) {
-    if(matrix[i].includes("e", "f", "l")) return "first class lever";
-    else if(matrix[i].includes("e", "l", "f")) return 'second class lever';
-    else if(matrix[i].includes("f", "e", "l")) return "third class lever"
-
+  for (let i = 0; i < matrix.length; i++) {
+    if (matrix[i].includes("e", "f", "l")) return "first class lever";
+    else if (matrix[i].includes("e", "l", "f")) return "second class lever";
+    else if (matrix[i].includes("f", "e", "l")) return "third class lever";
   }
 }
 console.log(alavancaClass(["f", "e", "l"]));
 
-
-
 function intOuString(element) {
-
-  if(typeof element === 'number') return 'int"';
-  else if(typeof element === 'string') return '"str"'
-
+  if (typeof element === "number") return 'int"';
+  else if (typeof element === "string") return '"str"';
 }
-console.log(intOuString('ola'));
-
-
+console.log(intOuString("ola"));
 
 function eneDecimoNumber(num) {
-  
-  if(num === 1) return 0 + ' is first even number';
-  else if(num === 2) return 2 + ' is second even number';
-  else if(num === 3) return 4 + ' is quarto even number';
-  else if(num === 6) return 6 + ' is sexto even number';
-  else if(num === 8) return 8 + ' is oitavo even number';
-  else if(num === 10) return 10 + ' is decimo even number';
-  else if(num > 10) return 'Perdi as conta ja'
-
+  if (num === 1) return 0 + " is first even number";
+  else if (num === 2) return 2 + " is second even number";
+  else if (num === 3) return 4 + " is quarto even number";
+  else if (num === 6) return 6 + " is sexto even number";
+  else if (num === 8) return 8 + " is oitavo even number";
+  else if (num === 10) return 10 + " is decimo even number";
+  else if (num > 10) return "Perdi as conta ja";
 }
-
 
 console.log(eneDecimoNumber(20));
 
-
-
 function olaMundo(numero) {
-
-  const mutiplos3 = [3,6,9,12,18,21,24,27];
-  const multiplos5 = [5,10,20,25,35,40];
-  const multiplos35 = [0,15,30,45];
+  const mutiplos3 = [3, 6, 9, 12, 18, 21, 24, 27];
+  const multiplos5 = [5, 10, 20, 25, 35, 40];
+  const multiplos35 = [0, 15, 30, 45];
 
   const achei3 = mutiplos3.find((n) => n === numero);
   const achei5 = multiplos5.find((n) => n === numero);
   const achei35 = multiplos35.find((n) => n === numero);
 
-  if(numero === achei3) return 'multiplo por 3';
-  else if(numero === achei5) return 'multiplo por 5';
-  else if(numero === achei35) return 'multiplo por 3 é 5';
-
+  if (numero === achei3) return "multiplo por 3";
+  else if (numero === achei5) return "multiplo por 5";
+  else if (numero === achei35) return "multiplo por 3 é 5";
 }
 
 console.log(olaMundo(9));
-
-
 
 function toInt(string) {
   // coverte string em inteiro
   return Number(string);
 }
 
-console.log(toInt('7'));
-
+console.log(toInt("7"));
 
 function toStr(number) {
-    // coverte number em string
-    return number.toString();
+  // coverte number em string
+  return number.toString();
 }
 
 console.log(toStr(6));
 
-
-
 function buuRrrr(num) {
-  
-  let strin = 'Burp';
+  let strin = "Burp";
   let slic = strin.charAt(2);
-  let rep =  slic.repeat(num);
+  let rep = slic.repeat(num);
 
   return strin.replace("r", rep);
-
 }
 
 console.log(buuRrrr(3));
 
-
-
 function espacoStrin(string) {
-  return string.replace(/(.)/g, '$1 ');
+  return string.replace(/(.)/g, "$1 ");
 }
 
-console.log(espacoStrin('Futebol'));
-
-
+console.log(espacoStrin("Futebol"));
 
 function quintoArguments() {
-
-  if(arguments.length === 0 && arguments.length < 5) return "Not enough arguments";
+  if (arguments.length === 0 && arguments.length < 5)
+    return "Not enough arguments";
 
   return typeof arguments[5];
-
-
 }
 
-
-console.log(quintoArguments(1,2,3,4,5))
-
-
+console.log(quintoArguments(1, 2, 3, 4, 5));
 
 const totalXicaras = (xicara) => {
-
   let total = Math.floor(xicara / 6);
   return total + xicara;
-
-}
+};
 
 console.log(totalXicaras(213));
 
-
-
-
 const incrivelEdabit = (string) => {
-
-  if(string.includes('edabit')) return string.replace('is','is');
-  else  return string.replace("is",'is not'); 
-
-}
+  if (string.includes("edabit")) return string.replace("is", "is");
+  else return string.replace("is", "is not");
+};
 
 console.log(incrivelEdabit("edabit is amazing"));
 
+const repetLast = (string, numero) => {
+  const letra = "o";
+  return string.replace(/([A-Za-z])\s*$/, letra.repeat(numero));
+};
 
-
-const repetLast = (string,numero) => {
-
-  const letra = 'o'
-  return string.replace(/([A-Za-z])\s*$/,letra.repeat(numero));
-}
-
-console.log(repetLast('Hello',3));
-
-
-
+console.log(repetLast("Hello", 3));
 
 const perimetroKm = (custo) => {
-
   let primeiroKm = custo / 3;
   let segundoKm = custo / 2;
 
   return Math.floor(primeiroKm + segundoKm - primeiroKm);
-
 };
 
- const res = perimetroKm(99);
+const res = perimetroKm(99);
 
- console.log(res);
+console.log(res);
 
-
-
-
-
- function quantyPalmas(string,sub) {
-
-  const regex = new RegExp(sub,'gi');
+function quantyPalmas(string, sub) {
+  const regex = new RegExp(sub, "gi");
   const match = string.match(regex);
 
   return match ? match.length : 0;
+}
 
+console.log(quantyPalmas("ClaClaClaClap!", "cla"));
 
- }
+function passoPalits(passos) {
+  let total = passos * 5;
 
- console.log(quantyPalmas('ClaClaClaClap!','cla'));
-
-
-
- 
- function passoPalits(passos) {
-  let total = passos * 5
-
-  if(passos === 1) return 6
+  if (passos === 1) return 6;
 
   return total + 1;
-
 }
 
 console.log(passoPalits(4));
 
-
-
-
 function menorMaior(array) {
-
   const numMaior = Math.max(...array);
   const numMenor = Math.min(...array);
 
-  return [numMaior,numMenor].sort((a,b) => a - b);
-
+  return [numMaior, numMenor].sort((a, b) => a - b);
 }
 console.log(menorMaior([1]));
 
-
-
-
-
-
 function natalChegando(data) {
-
   const diaMes = data.getDate();
   const mes = data.getMonth();
 
   return diaMes === 24 && mes === 11 ? true : false;
-
 }
 
 console.log(natalChegando(new Date(3000, 11, 14)));
 
-
-
-
-function aninhaArray(array1,array2) {
-
+function aninhaArray(array1, array2) {
   let valueMinimo = Math.min(...array1);
   let valueMinim2 = Math.min(...array2);
 
   let valorMaximo = Math.max(...array1);
   let valorMaximo2 = Math.max(...array2);
 
-  if(valueMinimo > valueMinim2) return true;
-  else if(valueMinimo === valueMinim2) return false;
+  if (valueMinimo > valueMinim2) return true;
+  else if (valueMinimo === valueMinim2) return false;
 
-   if(valorMaximo < valorMaximo2) return true;
-   else if(valorMaximo === valorMaximo2) return false;
-   else return false;
-
+  if (valorMaximo < valorMaximo2) return true;
+  else if (valorMaximo === valorMaximo2) return false;
+  else return false;
 }
-
 
 console.log(aninhaArray([9, 9, 8], [8, 9, 10]));
 
-
-
-
 function regexCofe(string) {
-
-  const regex = /\b([01]\d|2[0-3]):([0-5]\d)\b/g
+  const regex = /\b([01]\d|2[0-3]):([0-5]\d)\b/g;
 
   return string.match(regex);
-
 }
 
-console.log(regexCofe('Café da manhã às 09:00 no quarto 123:456'))
-
-
-
+console.log(regexCofe("Café da manhã às 09:00 no quarto 123:456"));
 
 let promis = new Promise((resolve) => {
-
   setTimeout(() => {
-    resolve('edabit')
-  },300)
-
-})
+    resolve("edabit");
+  }, 300);
+});
 
 console.log(promis);
 
-
-
 function somaResistencia(array) {
-
-  return array.reduce((ac,it) => ac + it);
-
+  return array.reduce((ac, it) => ac + it);
 }
 
 console.log(somaResistencia([16, 3.5, 6]));
 
-
-
-
 function maiorTroca(numero) {
-
   const strin = numero.toString();
-  const primReplace = strin.slice(0,1).replace(strin[1],strin[0]).replace('',strin[1]);
+  const primReplace = strin
+    .slice(0, 1)
+    .replace(strin[1], strin[0])
+    .replace("", strin[1]);
 
   let numberFormat = Number(primReplace);
 
-  if(numberFormat < numero || numberFormat === numero) return true;
-  else if(numberFormat > numero) return false;
-
+  if (numberFormat < numero || numberFormat === numero) return true;
+  else if (numberFormat > numero) return false;
 }
 
 console.log(maiorTroca(18));
 
-
-
-
 function perdidaoMultidao(string) {
-
   const regx = /(?<=[A-Z])[a-z](?=[A-Z])/g;
   const methString = string.match(regx);
 
-  return  methString.toString().split(',').join('');
-
+  return methString.toString().split(",").join("");
 }
 
-console.log(perdidaoMultidao('bEEFGBuFBRrHgUHlNFYaYr'));
+console.log(perdidaoMultidao("bEEFGBuFBRrHgUHlNFYaYr"));
 
-
-
-function doisArray(array1,array2) {
-
-  return [...array1,...array2].sort((a,b) => a - b);
-
+function doisArray(array1, array2) {
+  return [...array1, ...array2].sort((a, b) => a - b);
 }
 
 console.log(doisArray([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]));
 
-
-
-function quemEmaior(array1,array2) {
-
-  if(array1 > array2) return true;
+function quemEmaior(array1, array2) {
+  if (array1 > array2) return true;
   else return false;
-
 }
 
 console.log(quemEmaior([true, 10, "zebra"], [true, 10, "zebra"]));
 
-
-
 function negacaoZero(num) {
-
   const zero = num--;
   const um = num++;
 
-  return zero,Math.abs(um);
-
+  return zero, Math.abs(um);
 }
-
 
 console.log(negacaoZero(1));
 
-
-
 function divisaoNumerica(numero) {
-
   const div1 = numero / 2;
   const div2 = numero / 2;
 
-  if(numero % 2 !== 0) return [
-    Math.floor(div1), Math.ceil(div2)
-  ];
-  
-  return [div1,div2];
+  if (numero % 2 !== 0) return [Math.floor(div1), Math.ceil(div2)];
 
+  return [div1, div2];
 }
 
 console.log(divisaoNumerica(1));
 
-
 function filterPares(array) {
-  return array.filter(n => n % 2 === 0);
-
+  return array.filter((n) => n % 2 === 0);
 }
 
 console.log(filterPares([1, 3, 2, 6, 4, 8]));
 
-
-
-
 function filterString(array) {
-
-  return array.filter((item) => typeof item === 'number');
-
+  return array.filter((item) => typeof item === "number");
 }
 
 console.log(filterString([1, 2, "aasf", "1", "123", 123]));
 
-
-
 function erro(numero) {
+  const erros = [
+    "Check the fan: e1",
+    "Emergency stop: e2",
+    "Pump Error: e3",
+    "c: e4",
+    "Temperature Sensor Error: e5",
+  ];
 
-  const erros = [ "Check the fan: e1","Emergency stop: e2",
-    "Pump Error: e3","c: e4","Temperature Sensor Error: e5"];
+  let value = [];
 
-    let value = [];
-    
-    for(let err of erros) {
-      value.push(err);
-    }
+  for (let err of erros) {
+    value.push(err);
+  }
 
-    return value[numero - 1];
-
+  return value[numero - 1];
 }
 
 console.log(erro(4));
 
-
-
-
-
 function repeatStrinTho(string) {
-
   let strin = "";
 
-  for(let str of string) {
+  for (let str of string) {
     let repet = str.repeat(2);
     strin += repet;
   }
@@ -1146,95 +978,446 @@ function repeatStrinTho(string) {
   return strin;
 }
 
-
-console.log(repeatStrinTho('Hello World!'));
-
-
-
+console.log(repeatStrinTho("Hello World!"));
 
 function orderArray(array) {
-  let reverse = array.sort()
+  let reverse = array.sort();
 
   return reverse;
-
 }
 
 console.log(orderArray(["may", "april", "september", "august"]));
 
-
-
-
 function facamimRir(str) {
-
-  if(str === 'Make me smile') return str.replace('smile',':D'); 
-  else if(str === "Make me grin") return str.replace('grin',':)'); 
-  else if(str === 'Make me sad') return str.replace('sad',':('); 
+  if (str === "Make me smile") return str.replace("smile", ":D");
+  else if (str === "Make me grin") return str.replace("grin", ":)");
+  else if (str === "Make me sad") return str.replace("sad", ":(");
 
   return str;
 }
 
-console.log(facamimRir('Make me grin'));
-
-
+console.log(facamimRir("Make me grin"));
 
 function digitoMaisAlto(numero) {
-
   const newString = numero.toString();
-  const splitNew = newString.split('');
+  const splitNew = newString.split("");
 
   const loop = splitNew.map((item) => Number(item));
 
   return Math.max(...loop);
-
 }
 
 console.log(digitoMaisAlto(77899));
 
+function apenasPares(array) {
+  return array.filter((item, index) => {
+    return (item % 2 === 0) & (index % 2 === 0);
+  });
+}
+
+console.log(apenasPares([0, 1, 2, 3, 4]));
+
+function repetStin(string, numero) {
+  return string.repeat(numero);
+}
+
+console.log(repetStin("ab", 3));
+
+function calcularDiferenca(objeto, limite) {
+  const { skate, painting, shoes } = objeto;
+
+  return skate + painting + shoes - limite;
+}
+
+console.log(calcularDiferenca({ skate: 200, painting: 200, shoes: 1 }, 400));
+
+function mediaArray(array) {
+  const media = array.reduce((acc, it) => {
+    return (acc + it) / array.length;
+  });
+
+  return media;
+}
+
+console.log(mediaArray([1, 5, 6]));
+
+function somarNegativos(array) {
+  return array.reduce((acc, it) => {
+    return Math.abs(acc) + Math.abs(it);
+  });
+}
+
+console.log(somarNegativos([2, -1, 4, 8, 10]));
+
+function ordemArrayCresceste(array) {
+  return array.sort((a, b) => a - b);
+}
+
+console.log(ordemArrayCresceste([80, 29, 4, -95, -24, 85]));
+
+function encontreBomba(string) {
+  if (string.includes("bomb")) return "Duck!!!";
+  else return "There is no bomb, relax.";
+}
+console.log(encontreBomba("his goes boom!!!"));
+
+function comparaTion(element) {
+  const el = element;
+  return eval(el);
+}
+
+console.log(comparaTion("2===2"));
+
+function thauName(nome, num) {
+  if (num === 1) return `Hello! ${nome.toUpperCase()}`;
+  else return `Bye! ${nome.toUpperCase()}`;
+}
+
+console.log(thauName("arthur", 2));
+
+function formataNumber(array) {
+  const subStrin = array.toString();
+  const splitG = subStrin.split(",").join("");
+  const formateSlice = splitG.slice(0, 3);
+  const primeiroTeste = formateSlice
+    .padStart(10, "(")
+    .replace("((((((", "")
+    .padEnd(10, ")")
+    .replace(")))))", "");
+  const segundoTeste = splitG.slice(3, 6).padEnd(10, "-").replace("------", "");
+  const terceiroTeste = splitG.slice(-4);
+
+  return `${primeiroTeste} ${segundoTeste}${terceiroTeste}`;
+}
+
+console.log(formataNumber([3, 4, 5, 5, 0, 1, 2, 5, 2, 7]));
+
+function numberSimetrico(number) {
+  const formateStr = number.toString();
+  const splitReverse = formateStr.split("").reverse("");
+
+  const mep = splitReverse.map((item) => Number(item));
+  const numbSr = mep.join("");
+
+  const check = Number(numbSr);
+
+  return check === number;
+}
+
+console.log(numberSimetrico(1112111));
+
+function numberHashes(string) {
+  const trasforMStr = [...string];
+  const filterHash = trasforMStr.filter((n) => n === "#").length;
+  const filterPlus = trasforMStr.filter((n) => n === "+").length;
+
+  return [filterHash, filterPlus];
+}
+
+console.log(numberHashes("##++"));
+
+function firstLetter(array) {
+  let str = "";
+
+  for (const first of array) {
+    str += first[0];
+  }
+
+  return str;
+}
+
+console.log(firstLetter(["Harry", "Newt", "Luna", "Cho"]));
+
+function reverseTheCase(string) {
+  const strArr = [...string];
+  let caixa = "";
+
+  for (const str of strArr) {
+    let value = str;
+
+    if (value.includes(value.toUpperCase())) {
+      caixa += value.replace(
+        `${value.toUpperCase()}`,
+        `${value.toLowerCase()}`
+      );
+    } else if (value.includes(value.toLowerCase())) {
+      caixa += value.replace(
+        `${value.toLowerCase()}`,
+        `${value.toUpperCase()}`
+      );
+    }
+  }
+
+  return caixa;
+}
+
+console.log(reverseTheCase("MANY THANKS"));
+
+function validatyPostal(codigo) {
+  const removeS = codigo.trim();
+
+  if (codigo !== removeS) {
+    alert("erro");
+    return false;
+  }
+  if (codigo.length > 5) {
+    console.log("Apenas 5 digitos permitidos");
+    return false;
+  }
+
+  return codigo;
+}
+
+console.log(validatyPostal("63636"));
+
+function quantyTrues(array) {
+  return array.filter((item) => item === true).length;
+}
+
+console.log(quantyTrues([true, false, true, false, true]));
+
+function recebiStr(string) {
+  return retornoStr(string);
+}
+
+console.log(recebiStr("ola"));
+
+function retornoStr(str) {
+  return str;
+}
+
+function jogoTabuleiro(posicao, alcance) {
+  let totalDado = 6;
+  let valor = posicao > alcance ? true : false;
+  let igual = posicao === alcance ? true : false;
+
+  if (valor) {
+    return false;
+  }
+  if (igual) {
+    return false;
+  } else if (posicao + totalDado > alcance || posicao + totalDado === alcance) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(jogoTabuleiro(7, 6));
+
+function divisorStrin(string, divisor) {
+  if (string === "s") {
+    return divisor * 4;
+  }
+  if (string === "c") {
+    return divisor * 6.28;
+  }
+}
+
+console.log(divisorStrin("c", 4));
+
+function quantyDigitos(number) {
+  let strNumber = number.toString();
+
+  return strNumber.length;
+}
+
+console.log(quantyDigitos(1305955581031));
+
+function quatyDigitoTho(number) {
+  let caixa1 = "";
+
+  for (let i = 0; i < number; i++) {
+    const valor = i.toFixed();
+
+    caixa1 += valor;
+  }
+
+  return caixa1.length;
+}
+
+console.log(quatyDigitoTho(10));
+
+function montyObjeto(obj, nome, value) {
+  return (obj = { nome: nome, value: value });
+}
+
+console.log(montyObjeto({}, "Brutus", 300));
+
+function generationFamily(x, y) {
+  let femea = ["meu!", "filha", "neta", "bisneta", "mãe", "avó", "bisavó"];
+  let macho = ["meu!", "filho", "Neto", "Bisneto	", "pai", "	avô", "bisavô"];
+
+  if (y === "m") {
+    return macho[x];
+  } else if (y === "f") {
+    return femea[x];
+  }
+}
+
+console.log(generationFamily(2, "m"));
+
+function removeFalse(array) {
+  return array.filter((item) => {
+    return (
+      item >= 1 ||
+      item === true ||
+      (typeof item === "string" && item !== "" && item !== false)
+    );
+  });
+}
+
+console.log(removeFalse([0, 1, false, 2, "", 3]));
+
+function recebiNumber(n) {
+  const soma = somaN(n);
+  return soma;
+}
+
+console.log(recebiNumber(10));
+
+function somaN(n) {
+  return n + 10;
+}
+
+function newObj(obj) {
+  return Object.entries(obj);
+}
+
+console.log(newObj({ a: 1, b: 2 }));
+
+function concatArray(...argu) {
+  return [].concat(...argu);
+}
+
+console.log(concatArray([1], [2], [3], [4], [5], [6], [7]));
+
+function totalPrice(quantia, total) {
+  const prices = Math.floor(quantia[0] / 0.25);
+  const prices1 = Math.floor(quantia[1] / 0.1);
+  const prices2 = Math.floor(quantia[2] / 0.05);
+  const prices3 = Math.floor(quantia[3] / 0.01);
+
+  let soma = prices + prices1 + (prices2 + prices3);
+
+  if (soma > total) return true;
+  else return false;
+}
+
+console.log(totalPrice([10, 0, 0, 50], 3.85));
+
+function quantyInteiro(a, b, c) {
+  if (a === b && b === c && c === a) {
+    return 3;
+  } else if (a === b && c !== a && c !== b) {
+    return 2;
+  } else if (b === a && c !== a && c !== a) {
+    return 2;
+  } else if (c === a && b !== a && b !== c) {
+    return 2;
+  } else if (b === c && b !== a && c !== a) {
+    return 2;
+  } else if (a !== b && b !== c && c !== a) {
+    return 0;
+  }
+}
+
+console.log(quantyInteiro(0, 3, 3));
+
+function replaceString(string) {
+  let dadoos = "";
+
+  if (string.includes("a") || string.includes("e")) {
+    const repla = [...string].map((item) =>
+      item.replace("a", "4").replace("e", "3")
+    );
+    dadoos = repla.join("");
+  } else if (string.includes("i") || string.includes("s")) {
+    const repla2 = [...string].map((item) =>
+      item.replace("i", "5").replace("s", "6")
+    );
+    dadoos = repla2.join("");
+  }
+
+  return dadoos;
+}
+
+console.log(replaceString("become a coder"));
+
+function letterCapitalize(string) {
+  return string.map((item) => {
+    return item.charAt(0).toUpperCase() + item.slice(1);
+  });
+}
+
+console.log(letterCapitalize(["samuel", "MABELLE", "letitia", "meridith"]));
+
+const arrayTeste = [
+  "--oooo-ooo--",
+  "--xx--x--xx--",
+  "--o---o--oo--",
+  "--xx--x--ox--",
+  "--xx--x--ox--",
+];
+
+function filterType(type) {
+  const filterTipoX = type.filter((item) => {
+    return item.includes("--ox") || item.includes("--xx");
+  }).length;
+
+  const filterTipoO = type.filter((item) => {
+    return item.includes("--o") && item.includes("-o") && item.includes("--oo");
+  }).length;
+
+  return [filterTipoX, filterTipoO];
+}
+
+console.log(filterType(arrayTeste));
+
+function guerraDeNumbers(numeros) {
+  const filterPar = numeros
+    .filter((item) => item % 2 === 0)
+    .reduce((acc, it) => {
+      return acc + it;
+    });
+
+  const filterImpar = numeros
+    .filter((item) => item % 2 !== 0)
+    .reduce((acc, it) => {
+      return acc + it;
+    });
+
+  return `valor e de: ${Math.abs(filterPar - filterImpar)}`;
+}
+
+console.log(guerraDeNumbers([12, 90, 75]));
+
+function lastDig(a, b, c) {
+  const multi = a * b;
+  const ultimoNumber = Number(multi.toString().split("").splice(-1));
+  const cFormat = Number(c.toString().split("").splice(-1));
+
+  return ultimoNumber === cFormat ? true : false;
+}
+console.log(lastDig(55, 226, 5190));
+
+function zipIt(homens, mulheres) {
+  return homens.length === mulheres.length
+    ? [
+        [mulheres[0], homens[0]],
+        [mulheres[1], homens[1]],
+      ]
+    : "sizes don't match";
+}
+
+console.log(zipIt(["Ana", "Amy", "Lisa"], ["Bob", "Josh"]));
 
 
+function removeABC(string) {
+  return string.includes("a") || string.includes("b") || string.includes("c")
+    ? string.replace("a", "").replace("b", "").replace("c", "")
+    : null;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(removeABC("This might be a bit hard"));
 
