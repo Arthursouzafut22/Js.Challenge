@@ -18,6 +18,7 @@ import chalangeDizSeven from "../script/chalange17.js";
 import chalangeDixOit from "../script/chalange18.js";
 import chalangeDizNov from "../script/chalange19.js";
 import chalangeDixVinte from "../script/chalange20.js";
+import twentyOne from "../script/chalange21.js";
 
 chalanGesOne();
 chalangeTho();
@@ -39,3 +40,7 @@ chalangeDizSeven();
 chalangeDixOit();
 chalangeDizNov();
 chalangeDixVinte();
+twentyOne();
+
+
+

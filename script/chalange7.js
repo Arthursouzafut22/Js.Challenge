@@ -18,8 +18,8 @@ function chalangeEigth() {
   console.log(climaAtual(""));
 
   const destructArray = (array) => {
-    let tho = ([um, dois, tres, quatro] = array);
-    return tho[0];
+    let [um, _, , , ,] = array;
+    return um;
   };
 
   console.log(destructArray(["bola", "amor", "dinheiro", "love"]));
